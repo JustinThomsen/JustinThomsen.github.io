@@ -1,0 +1,57 @@
+.icon-bar {
+    position: fixed;
+    top: 95%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-70%);
+    background-color: #6c757d;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    outline-style: solid;
+    outline-color: black;
+}
+
+.icon-bar a {
+    display: inline-block;
+    vertical-align: center;
+    width: 3em;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+    margin: .5%;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.gmail {
+    background: #bb0000;
+    color: white;
+}
+
+.linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.content {
+    margin-left: 75px;
+    font-size: 30px;
+}
