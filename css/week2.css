@@ -68,7 +68,7 @@ header {
 h1,
 h2,
 h3 {
-    font-family: Arial;
+    font-family: Palatino Linotype;
     margin-top: 0;
     font-weight: 300;
 }
@@ -117,7 +117,7 @@ h3 strong {
 
 p,
 li {
-    font-family: Georgia, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 p {
