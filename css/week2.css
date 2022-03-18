@@ -5,6 +5,7 @@
 body{
     min-width: 480px;
     background: url("../img/beltbackground.png") repeat-y;
+    background-attachment: fixed;
     background-color: black;
     padding-bottom: 7em;
 }
