@@ -1,191 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><title>Justin - About me</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/stickysocialbar.css">
-    <link rel="stylesheet" href="css/week2.css">
-    <meta charset="UTF-8">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justin R Thomsen | About Me & Interests</title>
+  <meta name="description" content="Personal background, family, music experiences, beer preferences, video games, and bucket list of Justin R Thomsen.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Bootstrap 4 for Carousel logic -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Modern Design System Stylesheets -->
+  <link rel="stylesheet" href="css/modern.css">
+
+  <style>
+    /* Custom Carousel Overrides for Dark Modern Aesthetic */
+    .carousel-inner {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .carousel-item {
+      height: 420px;
+      background-color: var(--bg-dark);
+    }
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .carousel-caption {
+      background: rgba(9, 13, 22, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.5rem;
+      border: 1px solid var(--border-card);
+      bottom: 2rem;
+      left: 10%;
+      right: 10%;
+    }
+    .carousel-caption h2 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 0.2rem;
+    }
+    .carousel-caption h4 {
+      font-size: 1.05rem;
+      color: var(--accent-cyan);
+      margin-bottom: 0.5rem;
+    }
+    .carousel-caption p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+    .interest-list {
+      list-style: none;
+      padding: 0;
+    }
+    .interest-item {
+      padding: 1.25rem;
+      border-bottom: 1px solid var(--border-card);
+    }
+    .interest-item:last-child {
+      border-bottom: none;
+    }
+    .interest-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .interest-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .beer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .beer-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+    }
+    .beer-style {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-amber);
+      font-weight: 700;
+    }
+    .beer-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .game-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .game-badge {
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: #c084fc;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-<article>
-    <header>
-        <div class="sticky"><h1>Justin&nbsp;Thomsen</h1>
-            <p>5770 Kerrs Lane<br>Bettendorf, IA 52722<br><a href="tel:13195948500" class="override"><span
-                    class="fas fa-phone"></span> 319.594.8500</a> <a href="mailto:justinrobertthomsen@gmail.com"
-                                                                     class="override"><span class="fas fa-envelope">justinrobertthomsen@gmail.com</span></a>
-            </p><a href="./index.html">One Page Resume</a> <a href="#" class="active">About Me</a></div>
-    </header>
-    <div>
-        <section>
-            <div class="card"><h2 class="card-title"><strong>Family</strong></h2>
-                <div class="card-body">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active"><img class="d-block img-fluid" src="img/fiona.jpg"
-                                                                   alt="Fiona">
-                                <div class="carousel-caption"><h2>Fiona Apple</h2><h4>Chibull</h4>
-                                    <p class="d-none d-sm-block">Chihuhua pitbull mutt mix<br>Scared of everything
-                                        except Erin.</p></div>
-                            </div>
-                            <div class="carousel-item"><img class="d-block img-fluid" src="img/gary.jpg" alt="Gary">
-                                <div class="carousel-caption"><h2>Gary Clark Dooder</h2><h4>Dogo Argentino</h4>
-                                    <p class="d-none d-sm-block">Dogo Argentino with a heart of gold.<br>Playful and
-                                        funny.</p></div>
-                            </div>
-                            <div class="carousel-item"><img class="d-block img-fluid" src="img/erin.jpg" alt="Erin">
-                                <div class="carousel-caption"><h2>Erin</h2><h4>Executive Wife</h4>
-                                    <p class="d-none d-sm-block">Wife of the year<br>(14 years and running)</p></div>
-                            </div>
-                            <div class="carousel-item"><img class="d-block img-fluid" src="img/justin2.jpg" alt="Justin">
-                                <div class="carousel-caption"><h2>Me</h2><h4>It's just me.</h4>
-                                </div>
-                            </div>
-                            <div class="carousel-item"><img class="d-block img-fluid" src="img/florence.jpg" alt="Florence">
-                                <div class="carousel-caption"><h2>Florence Welch</h2><h4>Labrabull</h4>
-                                    <p class="d-none d-sm-block">Bonus puppy foster fail.</p></div>
-                            </div>
-                        </div>
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                            <li data-target="#myCarousel" data-slide-to="3"></li>
-                            <li data-target="#myCarousel" data-slide-to="4"></li>
-                        </ol>
-                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"><span
-                                class="carousel-control-prev-icon"></span> </a><a class="carousel-control-next"
-                                                                                  href="#myCarousel" role="button"
-                                                                                  data-slide="next"><span
-                            class="carousel-control-next-icon"></span> </a>
-                        <button class="btn btn-danger btn-sm" id="carouselButton"><span class="fa fa-pause"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="card"><h2 class="card-title"><strong>MUSIC</strong></h2>
-                <h3 class="card-title"><strong>Favorite Experiences</strong></h3>
-                <ul class="card-body">
-                    <li class="card-title aboutme">Foo Fighters at Wrigley!</li>
-                    <li>A great night with my wife, meeting some new friends, catching up with some old friends, and
-                        listening to Dave and friends rock our faces! Loved getting to be on the field at Wrigley -
-                        though they blocked off the infield ;-)
-                    </li>
-                    <li class="card-title aboutme">A Night With Cake and Ben Folds</li>
-                    <li>Two of my favorite bands, playing together in one night! Was fun to have John give away a tree
-                        during the show, sadly I did not receive said tree.
-                    </li>
-                    <li class="card-title aboutme">Vandaliers at Codfish Hollow</li>
-                    <li>Watching anyone at the barn is awesome. Everyone should see a show at Codfish. Great night that
-                        ended a bit later than expected (pitch black at a barn in the country at 3a.m. makes for great
-                        star gazing)
-                    </li>
-                    <li class="card-title aboutme">Cake at Lollapalooza</li>
-                    <li>Meeting John McCrea and only being able to come up with "You're my hero" taught me a valuable
-                        lesson in how to talk to celebrities (hot tip, they are just people too)
-                    </li>
-                    <li class="card-title aboutme">Capital Cities at Summerfest</li>
-                    <li>Best show I've seen from a band I knew little of - led me to be a big fan.</li>
-                    <li class="card-title aboutme">Fitz and the Tantrums in Milwaukee</li>
-                    <li>Tons of energy, showed my wife and I that aging musician lovers like us can still enjoy big
-                        shows.
-                    </li>
-                </ul>
-            </div>
-            <div class="card"><h2 class="card-title"><strong>BEER</strong></h2>
-                <h3 class="card-title"><strong>Favorite Beers and Experiences</strong></h3>
-                <ul class="card-body aboutme">
-                    <li>Favorite by Style</li>
-                    <li>Stout/Porter: <a href="https://www.beeradvocate.com/beer/profile/35412/298202/">Cycle Brewing -
-                        BBA Hazelnut Imperial Stout</a>
-                        <div class="box">
-                            <iframe src="https://www.beeradvocate.com/beer/profile/35412/298202/"></iframe>
-                        </div>
-                    </li>
-                    <li>IPA: <a href="https://www.beeradvocate.com/beer/profile/23222/113674/">Toppling Goliath : King
-                        Sue</a>
-                        <div class="box">
-                            <iframe src="https://www.beeradvocate.com/beer/profile/23222/113674/"></iframe>
-                        </div>
-                    </li>
-                    <li>Sour/Fruit: <a href="https://newglarusbrewing.com/beers/ourbeers/beer/wisconsin-belgian-red">New
-                        Glarus - Wisconsin Belgian Red</a>
-                        <div class="box">
-                            <iframe src="https://newglarusbrewing.com/beers/ourbeers/beer/wisconsin-belgian-red"></iframe>
-                        </div>
-                    </li>
-                    <li>Lager/Pils/Helles: <a href="https://www.weihenstephaner.de/en/our-beers/original-helles/">Bayerische
-                        Staatsbrauerei Weihenstephan - Weihenstephaner Original</a>
-                        <div class="box">
-                            <iframe src="https://www.weihenstephaner.de/en/our-beers/original-helles/"></iframe>
-                        </div>
-                    </li>
-                    <li>Mead: <a href="https://www.garagistemeadery.com/mead-archives/reboog-vitis">Garagiste - Reboog
-                        Vitis</a>
-                        <div class="box">
-                            <iframe src="https://www.garagistemeadery.com/mead-archives/reboog-vitis"></iframe>
-                        </div>
-                    </li>
-                    <li>Belgian: <a href="https://www.beeradvocate.com/beer/profile/313/1545/">Brouwerij Westvleteren -
-                        Trappist Westvleteren 12</a>
-                        <div class="box">
-                            <iframe src="https://www.beeradvocate.com/beer/profile/313/1545/"></iframe>
-                        </div>
-                    </li>
-                    <li>Unique Style: <a
-                            href="https://angrychairbrewing.com/beer/barrel-aged-imperial-german-chocolate-cupcake-stout/">Angry
-                        Chair - Barrel Aged Imperial German Chocolate Cupcake Stout</a>
-                        <div class="box">
-                            <iframe src="https://angrychairbrewing.com/beer/barrel-aged-imperial-german-chocolate-cupcake-stout/"></iframe>
-                        </div>
-                    </li>
-                </ul>
-                <h3>Check out my poorly maintained untappd profile:</h3><a href="https://untappd.com/user/oldeesrock"
-                                                                           id="aboutMeCard"><i
-                        class="fab fa-untappd"></i></a></div>
-        </section>
-        <div class="two-col">
-            <section>
-                <div class="card"><h2 class="card-title">VIDEO GAMES</h2>
-                    <ol class="card-body" id="aboutMeOrderedList">
-                        <li>Final Fantasy VII</li>
-                        <li>Kingdom Hearts</li>
-                        <li>Hades</li>
-                        <li>Ultima VII part 2: Serpent Isle</li>
-                        <li>Super Dodge Ball</li>
-                        <li>Elder Scrolls Series</li>
-                        <li>Fallout New Vegas</li>
-                        <li>Metal Gear Solid</li>
-                    </ol>
-                </div>
-            </section>
-            <section>
-                <div class="card" id="skills"><h2 class="card-title">BUCKET LIST</h2>
-                    <ul class="card-body">
-                        <li>Climb Grandfather Mountain</li>
-                        <li>Make my own video game</li>
-                    </ul>
-                </div>
-            </section>
-        </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="./index.html" class="navbar-brand">
+      <i class="fa-solid fa-layer-group"></i> Justin R Thomsen
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="./index.html#about" class="nav-link">CV Home</a></li>
+      <li><a href="#family" class="nav-link">Family</a></li>
+      <li><a href="#music" class="nav-link">Music</a></li>
+      <li><a href="#beer" class="nav-link">Craft Beer</a></li>
+      <li><a href="#games" class="nav-link">Gaming</a></li>
+      <li><a href="./index.html" class="nav-link nav-btn"><i class="fa-solid fa-arrow-left"></i> Back to Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="hero-section" style="padding-bottom: 2rem;">
+    <div class="container text-center">
+      <div class="section-header reveal-up">
+        <span class="section-subtitle">Beyond The Resume</span>
+        <h1 class="hero-title">About Me & Personal Interests</h1>
+        <p class="hero-description" style="margin: 0 auto;">
+          A glimpse into my family, favorite live music experiences, craft beer discoveries, classic video games, and personal bucket list goals.
+        </p>
+      </div>
     </div>
-</article>
-<div class="icon-bar"><a href="https://www.facebook.com/justinrobertthomsen" class="facebook"><i
-        class="fab fa-facebook"></i></a> <a href="https://twitter.com/oldeesrock" class="twitter"><i
-        class="fab fa-twitter"></i></a> <a href="tel:13195948500"><i class="fas fa-phone"></i></a> <a
-        href="https://www.linkedin.com/in/juthomsen/" class="linkedin"><i class="fab fa-linkedin"></i></a> <a
-        href="mailto:justinrobertthomsen@gmail.com" class="gmail"><i class="fas fa-envelope"></i></a></div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-<script src="js/week2.js"></script>
+  </section>
+
+  <!-- Family Section -->
+  <section id="family">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-subtitle">Pups & Partner</span>
+        <h2 class="section-title">My Family</h2>
+      </div>
+
+      <div class="card reveal-up delay-1" style="max-width: 900px; margin: 0 auto;">
+        <div id="familyCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#familyCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#familyCarousel" data-slide-to="1"></li>
+            <li data-target="#familyCarousel" data-slide-to="2"></li>
+            <li data-target="#familyCarousel" data-slide-to="3"></li>
+            <li data-target="#familyCarousel" data-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/fiona.jpg" alt="Fiona Apple">
+              <div class="carousel-caption">
+                <h2>Fiona Apple</h2>
+                <h4>Chibull (Chihuahua / Pitbull Mutt Mix)</h4>
+                <p>Scared of everything except Erin.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/gary.jpg" alt="Gary Clark Dooder">
+              <div class="carousel-caption">
+                <h2>Gary Clark Dooder</h2>
+                <h4>Dogo Argentino</h4>
+                <p>Dogo Argentino with a heart of gold. Playful and funny.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/erin.jpg" alt="Erin">
+              <div class="carousel-caption">
+                <h2>Erin</h2>
+                <h4>Executive Wife</h4>
+                <p>Wife of the year!</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/justin2.jpg" alt="Justin">
+              <div class="carousel-caption">
+                <h2>Justin</h2>
+                <h4>Product Leader & Health Informatics Specialist</h4>
+                <p>Always curious and learning.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/florence.jpg" alt="Florence Welch">
+              <div class="carousel-caption">
+                <h2>Florence Welch</h2>
+                <h4>Labrabull</h4>
+                <p>Bonus puppy foster fail.</p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#familyCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#familyCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Music Section -->
+  <section id="music">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-subtitle">Live Shows & Concerts</span>
+        <h2 class="section-title">Favorite Music Experiences</h2>
+      </div>
+
+      <div class="card reveal-up delay-1" style="max-width: 900px; margin: 0 auto;">
+        <ul class="interest-list">
+          <li class="interest-item">
+            <div class="interest-title"><i class="fa-solid fa-guitar"></i> Foo Fighters at Wrigley Field</div>
+            <p class="interest-desc">A great night with my wife, meeting new friends, catching up with old friends, and listening to Dave Grohl and friends rock our faces off on the field at Wrigley!</p>
+          </li>
+          <li class="interest-item">
+            <div class="interest-title"><i class="fa-solid fa-music"></i> Cake & Ben Folds Co-Headlining</div>
+            <p class="interest-desc">Two of my favorite bands playing together in one night. John McCrea even gave away a tree during the show!</p>
+          </li>
+          <li class="interest-item">
+            <div class="interest-title"><i class="fa-solid fa-warehouse"></i> Vandoliers at Codfish Hollow</div>
+            <p class="interest-desc">Watching anyone perform at the Codfish Hollow barn in Iowa is awesome. Pitch black star gazing out in the country at 3 a.m.</p>
+          </li>
+          <li class="interest-item">
+            <div class="interest-title"><i class="fa-solid fa-microphone"></i> Cake at Lollapalooza</div>
+            <p class="interest-desc">Meeting John McCrea and blurting out "You're my hero!" taught me a great lesson about how celebrities are just normal people too.</p>
+          </li>
+          <li class="interest-item">
+            <div class="interest-title"><i class="fa-solid fa-compact-disc"></i> Capital Cities & Fitz and the Tantrums</div>
+            <p class="interest-desc">High-energy shows at Summerfest and Milwaukee proving that live music lovers can always rock out.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beer Section -->
+  <section id="beer">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-subtitle">Craft Brew Favorites</span>
+        <h2 class="section-title">Beer Preferences</h2>
+      </div>
+
+      <div class="card reveal-up delay-1" style="max-width: 900px; margin: 0 auto;">
+        <div class="beer-grid">
+          <div class="beer-card">
+            <div class="beer-style">Stout / Porter</div>
+            <div class="beer-name">Cycle Brewing — BBA Hazelnut Imperial Stout</div>
+          </div>
+          <div class="beer-card">
+            <div class="beer-style">IPA</div>
+            <div class="beer-name">Toppling Goliath — King Sue</div>
+          </div>
+          <div class="beer-card">
+            <div class="beer-style">Sour / Fruit</div>
+            <div class="beer-name">New Glarus — Wisconsin Belgian Red</div>
+          </div>
+          <div class="beer-card">
+            <div class="beer-style">Lager / Helles</div>
+            <div class="beer-name">Weihenstephaner — Original Helles</div>
+          </div>
+          <div class="beer-card">
+            <div class="beer-style">Mead</div>
+            <div class="beer-name">Garagiste — Reboog Vitis</div>
+          </div>
+          <div class="beer-card">
+            <div class="beer-style">Belgian Quad</div>
+            <div class="beer-name">Brouwerij Westvleteren — Trappist XII</div>
+          </div>
+        </div>
+        <div style="margin-top: 1.5rem; text-align: center;">
+          <a href="https://untappd.com/user/oldeesrock" target="_blank" rel="noopener" class="btn btn-outline">
+            <i class="fa-brands fa-untappd"></i> View Untappd Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Games & Bucket List Grid -->
+  <section id="games">
+    <div class="container">
+      <div class="row">
+        <!-- Video Games -->
+        <div class="col-md-6 mb-4 reveal-left">
+          <div class="card h-100">
+            <h3 class="role-title" style="margin-bottom: 1rem;"><i class="fa-solid fa-gamepad" style="color: var(--accent-purple);"></i> Favorite Video Games</h3>
+            <div class="game-list">
+              <span class="game-badge"><i class="fa-solid fa-ghost"></i> Final Fantasy VII</span>
+              <span class="game-badge"><i class="fa-solid fa-heart"></i> Kingdom Hearts</span>
+              <span class="game-badge"><i class="fa-solid fa-skull"></i> Hades</span>
+              <span class="game-badge"><i class="fa-solid fa-dragon"></i> Ultima VII: Serpent Isle</span>
+              <span class="game-badge"><i class="fa-solid fa-volleyball"></i> Super Dodge Ball</span>
+              <span class="game-badge"><i class="fa-solid fa-shield-halved"></i> Elder Scrolls Series</span>
+              <span class="game-badge"><i class="fa-solid fa-radiation"></i> Fallout: New Vegas</span>
+              <span class="game-badge"><i class="fa-solid fa-user-ninja"></i> Metal Gear Solid</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bucket List -->
+        <div class="col-md-6 mb-4 reveal-right">
+          <div class="card h-100">
+            <h3 class="role-title" style="margin-bottom: 1rem;"><i class="fa-solid fa-list-check" style="color: var(--accent-emerald);"></i> Personal Bucket List</h3>
+            <ul class="interest-list">
+              <li class="interest-item" style="padding-left: 0;">
+                <div class="interest-title" style="color: var(--accent-emerald);"><i class="fa-solid fa-mountain"></i> Climb Grandfather Mountain</div>
+                <p class="interest-desc">Trek through the crests and trails of the Blue Ridge Mountains in North Carolina.</p>
+              </li>
+              <li class="interest-item" style="padding-left: 0;">
+                <div class="interest-title" style="color: var(--accent-emerald);"><i class="fa-solid fa-person-hiking"></i> Trek to Everest Base Camp</div>
+                <p class="interest-desc">Embark on the legendary high-altitude expedition through the Himalayas to reach 17,598 feet in Nepal.</p>
+              </li>
+              <li class="interest-item" style="padding-left: 0;">
+                <div class="interest-title" style="color: var(--accent-emerald);"><i class="fa-solid fa-gamepad"></i> Build & Publish My Own Roguelite ARPG</div>
+                <p class="interest-desc">Design and launch a fast-paced Roguelite Action RPG featuring procedural dungeon runs, satisfying real-time combat, deep build synergy customization, and meta-progression.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Sticky Social Bar -->
+  <div class="social-floating-bar">
+    <a href="https://www.linkedin.com/in/juthomsen/" target="_blank" rel="noopener" class="social-icon-link" title="LinkedIn">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+    <a href="mailto:justinrobertthomsen@gmail.com" class="social-icon-link" title="Email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="tel:13195948500" class="social-icon-link" title="Phone">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+    <a href="./index.html" class="social-icon-link" title="CV Resume Home">
+      <i class="fa-solid fa-house"></i>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Justin R Thomsen. All rights reserved. | Bettendorf, IA</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js/modern.js"></script>
 </body>
 </html>
